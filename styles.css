@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundFade 5s infinite alternate;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+}
+
+
+@keyframes backgroundFade {
+    0% { background-color: #f0f8ff; }
+    100% { background-color: #e6f7ff; }
+}
+
+.horizontal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; /* Full width */
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Adjust width as needed */
+    animation: fadeIn 2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    animation: slideIn 2s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0); }
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%; /* Adjust width as needed */
+}
+
+form label {
+    margin-right: 10px;
+    width: 20%; /* Adjust width as needed */
+    color: #333;
+}
+
+form input, form textarea {
+    width: 70%; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#responseMessage {
+    text-align: center;
+    margin-top: 15px;
+    color: green;
+    animation: fadeIn 2s ease-in-out;
+}
